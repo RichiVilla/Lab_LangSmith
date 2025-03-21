@@ -1,24 +1,48 @@
-# LangChain Translation Model with OpenAI API
+# Uso de la API de OpenAI
 
-This project demonstrates how to use LangChain and the OpenAI API to create a translation model that translates text from English into another language (e.g., Italian).
+Este repositorio contiene un Google Colab que utiliza la API de OpenAI para generar respuestas de texto. A continuación, se detallan los pasos para ejecutar el notebook correctamente.
 
-## Requirements
+## Requisitos
 
-Before running this project, make sure to install the necessary dependencies and set up the environment variables for the OpenAI API key.
+Antes de ejecutar el código, asegúrate de tener lo siguiente:
 
-### Install Dependencies
+- Una cuenta en OpenAI con acceso a la API.
+- Una clave de API de OpenAI.
+- Conexión a internet estable.
+- Acceso a Google Colab.
 
-You will need to install the following Python packages:
+## Instalación
 
-- `langchain`
-- `openai`
+1. **Abrir Google Colab**
+   - Ve a [Google Colab](https://colab.research.google.com/).
+   - Abre el notebook desde tu Google Drive o súbelo desde tu computadora.
 
-You can install these using the following command:
+2. **Instalar dependencias**
+   
+   En la primera celda del notebook, ejecuta el siguiente comando para instalar la biblioteca `openai`:
+   
+   ```python
+   !pip install openai
+   ```
 
-```bash
-pip install -qU "langchain[openai]"
+3. **Configurar la API Key de OpenAI**
+   
+   Para autenticarte con la API de OpenAI, configura tu clave de API de la siguiente manera:
+   
+   ```python
+   import openai
+
+   openai.api_key = "TU_API_KEY"
+   ```
 
 
+## Ejecución
 
-![image](https://github.com/user-attachments/assets/58f493fa-f9ae-4d36-9d05-f3a6b0db148e)
+1. Ejecuta todas las celdas del notebook en orden para cargar las dependencias y configurar la API.
+2. Ingresa las instrucciones o consultas en la celda correspondiente (Como la API KEY).
+3. Observa las respuestas generadas por el modelo de OpenAI.
 
+## Posibles Errores y Soluciones
+
+- **Error de autenticación**: Verifica que la clave de API sea válida y que esté correctamente configurada.
+- **Límite de uso de API**: Si excedes el límite de uso de OpenAI, espera, revisa tu plan de suscripción o crea una nueva API.
